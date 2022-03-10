@@ -11,7 +11,6 @@ export const BusinessList = () => {
   const nyBusinessArray = businessArray.filter(obj => obj.addressStateCode === "NY")
   const manufacturingArray = businessArray.filter(obj => obj.companyIndustry === "Manufacturing")
 
-console.log(businessArray)
   // all businesses
   contentTargetAll.innerHTML += "<h1>Active Businesses</h1>";
   businessArray.forEach((businessObject) => {
@@ -35,6 +34,7 @@ console.log(businessArray)
 
 // purchasing agents
 
+
 const contentTargetPurchasingAgents = document.querySelector(".purchasingAgents");
 const fullBizArray = useBusinesses();
 
@@ -49,8 +49,6 @@ const purchasingAgent = () => fullBizArray.map(businessObject => {
 
 
 // purchasingAgent() logged the right results from here
-
-
 
 
 export const populatePurchasingAgents = () => {
