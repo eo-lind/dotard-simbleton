@@ -48,9 +48,8 @@ const purchasingAgent = () => fullBizArray.map(businessObject => {
 })
 
 
-// purchasingAgent() returned the right results
-// TODO use purchasingAgent() in the function below, export it to main, and call it there
-// ! removed export from the above function (it worked when exported) and pulled the import out of main
+// purchasingAgent() logged the right results from here
+
 
 
 

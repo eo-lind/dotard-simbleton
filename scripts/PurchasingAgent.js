@@ -3,7 +3,7 @@
 export const AgentHTML = (agentObject) => {
     return `
         <section class="agent">
-            <h2 class="agentName">${agentObject.fullName}</h2>
+            <h2 class="agentName">${agentObject.fullname}</h2>
             <div class="agentCompany">
                 ${agentObject.company}
             </div>
