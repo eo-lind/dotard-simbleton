@@ -12,19 +12,19 @@ export const BusinessList = () => {
   const manufacturingArray = businessArray.filter(obj => obj.companyIndustry === "Manufacturing")
 
   // all businesses
-  contentTargetAll.innerHTML += "<h1>Active Businesses</h1>";
+  contentTargetAll.innerHTML += "<div class='business'><h1>Active Businesses</h1></div>";
   businessArray.forEach((businessObject) => {
     contentTargetAll.innerHTML += Business(businessObject);
   });
 
   // NY businesses
-  contentTargetNY.innerHTML += "<h1>New York Businesses</h1>";
+  contentTargetNY.innerHTML += "<div class='business'><h1>New York Businesses</h1></div>";
   nyBusinessArray.forEach((businessObject) => {
     contentTargetNY.innerHTML += Business(businessObject);
   });
 
   // manufacturing businesses
-  contentTargetManufacturing.innerHTML += "<h1>Manufacturing Businesses</h1>";
+  contentTargetManufacturing.innerHTML += "<div class='business'><h1>Manufacturing Businesses</h1></div>";
   manufacturingArray.forEach((businessObject) => {
     contentTargetManufacturing.innerHTML += Business(businessObject);
   });
@@ -54,7 +54,7 @@ const purchasingAgent = () => fullBizArray.map(businessObject => {
 export const populatePurchasingAgents = () => {
   const purchasingAgentArr = purchasingAgent()
   
-  contentTargetPurchasingAgents.innerHTML += "<h1>Purchasing Agents</h1>";
+  contentTargetPurchasingAgents.innerHTML += "<div class='agent'><h1>Purchasing Agents</h1></div>";
   purchasingAgentArr.forEach((agentObject) => {
     contentTargetPurchasingAgents.innerHTML += AgentHTML(agentObject);
   });

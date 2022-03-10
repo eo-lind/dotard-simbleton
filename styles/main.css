@@ -1,4 +1,66 @@
 body {
-    font-family: sans-serif;
-  }
-  
+  font-family: sans-serif;
+  font-size: .85em;
+  margin: 0px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.allBusinesses, .businessList--newYork, .businessList--manufacturing {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.purchasingAgents {
+display: flex;
+flex-flow: row wrap;
+justify-content: space-around;
+}
+
+.agent { 
+  display: block;
+  background-color: lightgoldenrodyellow;
+  padding: 14px 16px;
+  max-width: 255px;
+  margin: 10px 2px;
+  align-self: stretch;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.business {
+  background-color: lightcyan;
+  padding: 14px 16px;
+  max-width: 255px;
+  margin: 10px 2px;
+  align-self: stretch;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  display: block;
+  padding: 14px 16px;
+}
+
