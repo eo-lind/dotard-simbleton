@@ -32,21 +32,33 @@ console.log(businessArray)
 
 };
 
-// purchasing agents
-const businesses = useBusinesses();
-const contentTargetPurchasingAgents = document.querySelector(".purchasingAgents");
 
-export const purchasingAgent = () => businesses.map(businessObject => {
+// purchasing agents
+
+const contentTargetPurchasingAgents = document.querySelector(".purchasingAgents");
+const fullBizArray = useBusinesses();
+
+const purchasingAgent = () => fullBizArray.map(businessObject => {
 	let agentObj = {}
 	agentObj.fullname = `${businessObject.purchasingAgent.nameFirst} ${businessObject.purchasingAgent.nameLast}`
 	agentObj.company = businessObject.companyName
 	agentObj.phone = businessObject.phoneWork
 
-  
-
-  contentTargetPurchasingAgents.innerHTML += "<h1>Manufacturing Businesses</h1>";
-  manufacturingArray.forEach((agentObj) => {
-    contentTargetPurchasingAgents.innerHTML += AgentHTML(agentObj);
-  });
-
+  return agentObj
 })
+
+
+// purchasingAgent() returned the right results
+// TODO use purchasingAgent() in the function below, export it to main, and call it there
+// ! removed export from the above function (it worked when exported) and pulled the import out of main
+
+
+
+export const populatePurchasingAgents = () => {
+  const purchasingAgentArr = purchasingAgent()
+  
+  contentTargetPurchasingAgents.innerHTML += "<h1>Purchasing Agents</h1>";
+  purchasingAgentArr.forEach((agentObject) => {
+    contentTargetPurchasingAgents.innerHTML += AgentHTML(agentObject);
+  });
+}

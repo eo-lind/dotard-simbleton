@@ -1,6 +1,8 @@
 import { BusinessList } from "./BusinessList.js"
-import { purchasingAgent } from "./BusinessList.js"
+import { populatePurchasingAgents } from './BusinessList.js';
+
 
 BusinessList()
-purchasingAgent()
 
+
+populatePurchasingAgents()
