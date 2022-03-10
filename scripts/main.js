@@ -1,5 +1,6 @@
 import { BusinessList } from "./BusinessList.js"
-// import { purchasingAgentList } from "./PurchasingAgentList.js"
+import { purchasingAgent } from "./BusinessList.js"
 
 BusinessList()
-// purchasingAgentList()
+purchasingAgent()
+
