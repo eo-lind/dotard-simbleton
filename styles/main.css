@@ -31,13 +31,13 @@ li a:hover {
 .allBusinesses, .businessList--newYork, .businessList--manufacturing {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
 }
 
 .purchasingAgents {
 display: flex;
 flex-flow: row wrap;
-justify-content: space-around;
+justify-content: flex-start;
 }
 
 .agent { 
@@ -53,7 +53,7 @@ justify-content: space-around;
 .business {
   background-color: lightcyan;
   padding: 14px 16px;
-  max-width: 255px;
+  min-width: 255[x];
   margin: 10px 2px;
   align-self: stretch;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
@@ -64,3 +64,11 @@ h1 {
   padding: 14px 16px;
 }
 
+.businessheading {
+  /* background-color: lightcyan; */
+  padding: 14px 16px;
+  max-width: 255px;
+  margin: 10px 2px;
+  align-self: stretch;
+  /* box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); */
+}

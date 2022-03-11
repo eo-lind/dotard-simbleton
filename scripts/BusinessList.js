@@ -12,19 +12,19 @@ export const BusinessList = () => {
   const manufacturingArray = businessArray.filter(obj => obj.companyIndustry === "Manufacturing")
 
   // all businesses
-  contentTargetAll.innerHTML += "<div class='business'><h1>Active Businesses</h1></div>";
+  // contentTargetAll.innerHTML += "<div class='businessheading'><h1>Active Businesses</h1></div>";
   businessArray.forEach((businessObject) => {
     contentTargetAll.innerHTML += Business(businessObject);
   });
 
   // NY businesses
-  contentTargetNY.innerHTML += "<div class='business'><h1>New York Businesses</h1></div>";
+  // contentTargetNY.innerHTML += "<div class='businessheading'><h1>New York Businesses</h1></div>";
   nyBusinessArray.forEach((businessObject) => {
     contentTargetNY.innerHTML += Business(businessObject);
   });
 
   // manufacturing businesses
-  contentTargetManufacturing.innerHTML += "<div class='business'><h1>Manufacturing Businesses</h1></div>";
+  // contentTargetManufacturing.innerHTML += "<div class='businessheading'><h1>Manufacturing Businesses</h1></div>";
   manufacturingArray.forEach((businessObject) => {
     contentTargetManufacturing.innerHTML += Business(businessObject);
   });
@@ -35,27 +35,27 @@ export const BusinessList = () => {
 // purchasing agents
 
 
-const contentTargetPurchasingAgents = document.querySelector(".purchasingAgents");
-const fullBizArray = useBusinesses();
+// const contentTargetPurchasingAgents = document.querySelector(".purchasingAgents");
+// const fullBizArray = useBusinesses();
 
-const purchasingAgent = () => fullBizArray.map(businessObject => {
-	let agentObj = {}
-	agentObj.fullname = `${businessObject.purchasingAgent.nameFirst} ${businessObject.purchasingAgent.nameLast}`
-	agentObj.company = businessObject.companyName
-	agentObj.phone = businessObject.phoneWork
+// const purchasingAgent = () => fullBizArray.map(businessObject => {
+// 	let agentObj = {}
+// 	agentObj.fullname = `${businessObject.purchasingAgent.nameFirst} ${businessObject.purchasingAgent.nameLast}`
+// 	agentObj.company = businessObject.companyName
+// 	agentObj.phone = businessObject.phoneWork
 
-  return agentObj
-})
+//   return agentObj
+// })
 
 
 // purchasingAgent() logged the right results from here
 
 
-export const populatePurchasingAgents = () => {
-  const purchasingAgentArr = purchasingAgent()
+// export const populatePurchasingAgents = () => {
+//   const purchasingAgentArr = purchasingAgent()
   
-  contentTargetPurchasingAgents.innerHTML += "<div class='agent'><h1>Purchasing Agents</h1></div>";
-  purchasingAgentArr.forEach((agentObject) => {
-    contentTargetPurchasingAgents.innerHTML += AgentHTML(agentObject);
-  });
-}
+//   // contentTargetPurchasingAgents.innerHTML += "<div class='agent'><h1>Purchasing Agents</h1></div>";
+//   purchasingAgentArr.forEach((agentObject) => {
+//     contentTargetPurchasingAgents.innerHTML += AgentHTML(agentObject);
+//   });
+// }
